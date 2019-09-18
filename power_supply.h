@@ -388,10 +388,10 @@ struct power_supply_config {
 
 /* Description of power supply */
 struct power_supply_desc {
-	const char *name;
-	enum power_supply_type type;
-	enum power_supply_property *properties;
-	size_t num_properties;
+	const char *name;	//电源设备名称
+	enum power_supply_type type;	//电源类型
+	enum power_supply_property *properties; //电源属性
+	size_t num_properties;	//属性数量
 
 	/*
 	 * Functions for drivers implementing power supply class.
@@ -428,8 +428,8 @@ struct power_supply_desc {
 struct power_supply {
 	const struct power_supply_desc *desc;
 
-	char **supplied_to;
-	size_t num_supplicants;
+	char **supplied_to;	//可对psy供电类型
+	size_t num_supplicants;	//
 
 	char **supplied_from;
 	size_t num_supplies;
