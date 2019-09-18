@@ -1,0 +1,2 @@
+#define __must_check  __attribute__((warn_unused_result))
+__must_check 表示一定要处理函数的返回值，否则编译器会给出警告
