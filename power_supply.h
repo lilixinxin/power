@@ -503,6 +503,7 @@ devm_power_supply_get_by_phandle(struct device *dev, const char *property)
 { return NULL; }
 #endif /* CONFIG_OF */
 extern void power_supply_changed(struct power_supply *psy);
+/*如果PSY_Driver检测到设备某些属性改变时，需要调用这个接口，通知power_supply_core*/
 extern int power_supply_am_i_supplied(struct power_supply *psy);
 extern int power_supply_set_battery_charged(struct power_supply *psy);
 
